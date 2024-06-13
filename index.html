@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Bienvenue sur Notre Application de Message <br> CHATFR</h1>
+        <p>
+            <a href="inscription1.php">Inscription</a> | <a href="connexion1.php">Connexion</a>
+        </p>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to right, #0073e6, #00aaff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: #fff;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    a {
+        color: #0073e6;
+        background-color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    a:hover {
+        background-color: #f0f0f0;
+        color: #0073e6;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        a {
+            padding: 8px 16px;
+            margin: 8px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+
+        a {
+            padding: 6px 12px;
+            margin: 6px;
+        }
+    }
+</style>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un ami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ajouter un ami</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+              
+                <li><a href="conversation.php">Conversations</a></li>
+                <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <form action="traiter_ajout_ami.php" method="post">
+            <label for="ami_pseudo">Pseudo de l'ami:</label>
+            <input type="text" id="ami_pseudo" name="ami_pseudo" required>
+            <input type="submit" value="Ajouter">
+        </form>
+    </section>
+    <footer>
+        <p>Application de Messagerie © 2024</p>
+    </footer>
+</body>
+</html>
+
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    margin: 20px;
+    text-align: center;
+}
+
+input[type="text"], input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+</style>

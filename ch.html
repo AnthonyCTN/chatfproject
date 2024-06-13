@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - Messagerie</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur votre Application de Messagerie</h1>
+        <nav>
+            <ul>
+                <li><a href="choisir_ami.php">Messages</a></li>
+                <li><a href="ajouter_ami.php">Ajouter un ami</a></li>
+                <li><a href="conversation.php">Conversations</a></li>
+                <li><a href="deconnexion.php">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <p>Cliquez sur les liens ci-dessus pour naviguer dans l'application.</p>
+    </section>
+    <footer>
+        <p>Application de Messagerie © 2024</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function checkNewFriends() {
+                fetch('check_new_friends.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.new_friends > 0) {
+                            alert(`Vous avez ${data.new_friends} nouveau(x) ami(s)!`);
+                            // Mettez à jour l'affichage ou la notification sur la page si nécessaire
+                        }
+                    })
+                    .catch(error => console.error('Erreur lors de la vérification des nouveaux amis:', error));
+            }
+        
+            // Vérifiez les nouveaux amis toutes les 30 secondes
+            setInterval(checkNewFriends, 30000);
+        });
+    </script>
+</body>
+</html>
+
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media queries pour les appareils mobiles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header, footer {
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
+
+</style>
